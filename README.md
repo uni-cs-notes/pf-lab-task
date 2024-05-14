@@ -500,3 +500,40 @@ for (int i=0;i<4;i++){
    return 0;
 }
 ```
+# making calculator using functions (23)
+```
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+ void calculator();
+ 
+int main(){
+    calculator();
+}
+
+void calculator(){
+    float n1,n2;
+    cout<<"enter ur 1st interger > ";
+      cin >> n1; 
+        cout<<"enter ur 2nd interger > ";
+         cin >> n2;
+    char keys;
+     cout<<"enter ur arthimatic operation!>>> ";
+       cin>>keys;
+    switch (keys){
+        case '+': cout<<">"<<n1+n2;
+        break;
+         case '-': cout<<">"<<n1-n2;
+        break;
+         case '*': cout<<">"<<n1*n2;
+        break;
+         case '/': cout<<">"<<n1/n2;
+        break;
+        default : cout<<"!!!! ERROR !!!!";
+        break;
+    }
+    
+}
+```
