@@ -458,10 +458,45 @@ int main() {
                   cout<<"*";
                 } 
         cout<<endl;
+
      }
 
 
     return 0;
 }
 ```
+# arrays (21)
+```
+#include <iostream>
+#include <string>
+using namespace std;
 
+int main()
+{
+  string cars[4]={ford,honda,bmw,gmc};
+   
+   cout<<cars[0]<<endl;
+   cout<<cars[1]<<endl;
+   cout<<cars[2]<<endl;
+   cout<<cars[3]<<endl;
+
+   return 0;
+}
+```
+## a better way to write arrays is through loops (22)
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  string cars[4]={ford,honda,bmw,gmc};
+   
+for (int i=0;i<4;i++){
+    cout<<cars[i];
+}
+
+   return 0;
+}
+```
