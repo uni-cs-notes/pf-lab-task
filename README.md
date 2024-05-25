@@ -537,3 +537,169 @@ void calculator(){
     
 }
 ```
+
+# arrays (21)
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  string cars[4]={ford,honda,bmw,gmc};
+   
+   cout<<cars[0]<<endl;
+   cout<<cars[1]<<endl;
+   cout<<cars[2]<<endl;
+   cout<<cars[3]<<endl;
+
+   return 0;
+}
+```
+## a better way to write arrays is through loops (22)
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  string cars[4]={ford,honda,bmw,gmc};
+   
+for (int i=0;i<4;i++){
+    cout<<cars[i];
+}
+
+   return 0;
+}
+```
+# functions (24)
+```
+#include <iostream>
+using namespace std;
+void namecall();  //function declearations 
+int main(){
+    namecall();  //function call
+    
+}
+
+void namecall(){  //function defination
+    string name;
+    cout<<"enter ur name >> ";
+    cin>>name;
+    cout<<name;
+}
+```
+# overload functions (25)
+```
+#include <iostream>
+using namespace std;
+
+// function with 2 parameters
+void display(int var1, double var2) {
+    cout << "Integer number: " << var1;
+    cout << " and double number: " << var2 << endl;
+}
+
+// function with double type single parameter
+void display(double var) {
+    cout << "Double number: " << var << endl;
+}
+
+// function with int type single parameter
+void display(int var) {
+    cout << "Integer number: " << var << endl;
+}
+
+int main() {
+
+    int a ;
+    double b ;
+    
+    cout<<"enter ur interger >> ";
+    cin>>a;
+    cout<<"enter ur double >> ";
+    cin>>b;
+    
+    // call function with int type parameter
+    display(a);
+
+    // call function with double type parameter
+    display(b);
+
+    // call function with 2 parameters
+    display(a, b);
+
+    return 0;
+}
+```
+# 123
+```
+#include <iostream>
+#include <string>
+#include <map>
+using namespace std;
+
+// Function to register a new user
+void registerUser(map<string, string>& users) {
+    string username, password;
+    cout << "Enter a username: ";
+    cin >> username;
+    cout << "Enter a password: ";
+    cin >> password;
+
+    // Check if the username already exists
+    if (users.find(username) != users.end()) {
+        cout << "Username already exists. Please choose a different one." << endl;
+        return;
+    }
+
+    // Create a new user and add it to the map
+    users[username] = password;
+    cout << "User registered successfully!" << endl;
+}
+
+// Function to login a user
+void loginUser(map<string, string>& users) {
+    string username, password;
+    cout << "Enter your username: ";
+    cin >> username;
+    cout << "Enter your password: ";
+    cin >> password;
+
+    // Check if the user exists and the password is correct
+    if (users.find(username) != users.end() && users[username] == password) {
+        cout << "Login successful!" << endl;
+    } else {
+        cout << "Invalid username or password." << endl;
+    }
+}
+
+int main() {
+    map<string, string> users;
+    int choice;
+
+    do {
+        cout << "1. Register\n2. Login\n3. Exit\nEnter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                registerUser(users);
+                break;
+            case 2:
+                loginUser(users);
+                break;
+            case 3:
+                cout << "Goodbye!" << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+        }
+    } while (choice != 3);
+
+    return 0;
+}
+```
+
+
