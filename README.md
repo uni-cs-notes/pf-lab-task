@@ -702,4 +702,75 @@ int main() {
 }
 ```
 
+# zig zag 
+
+>    *       *
+>  *  *   *   *
+> *      *       *
+
+```
+
+#include <iostream>
+using namespace std;
+
+int main(){
+  int n = 9;
+  for(int i = 1 ; i<=3 ; i++ ){
+    for(int j =1 ; j<= n ; j++){
+      if(((i+j) % 4 == 0 )||(i == 2 && j % 4 == 0)){
+        cout<<"*  ";
+      }else 
+      cout<< "  ";
+    } 
+   cout<<endl;
+  }
+ return 0;
+}  
+
+```
+# 54321
+# 5432
+# 543
+# 54
+# 5
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+  int r = 5;
+ for(int i = 1 ; i <=r; i++){
+     for(int j = r; j >= i ; j--){
+         cout<<j<<"";
+     }
+   cout<<endl;
+ }
+ return 0;
+} 
+```
+
+# 5 4 3 2 1 
+# 4 3 2 1 
+# 3 2 1 
+# 2 1 
+# 1 
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+  int r = 5;
+ for(int i = r ; i >= 1; i--){
+     for(int j = i; j >= 1 ; j--){
+         cout<<j<<" ";
+     }
+   cout<<endl;
+ }
+ return 0;
+}  
+```
+
+
+
 
