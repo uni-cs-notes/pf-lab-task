@@ -772,4 +772,227 @@ int main(){
 ```
 # logical programs  
 
+> * 
+> * * 
+> * * * 
+> * * * * 
+> * * * * * 
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n = 0;
+    cout<<"n >> ";
+    cin>>n;
+    for(int i = 1; i <=n ; i++){
+        for(int j = 1; j <= i ; j++){
+            cout<<"* ";
+        }
+      cout<< endl;
+    }
+ return 0;
+}
+```
+
+> 1 
+> 1 2 
+> 1 2 3 
+> 1 2 3 4 
+> 1 2 3 4 5 
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n = 0;
+    cout<<"n >> ";
+    cin>>n;
+    for(int i = 1; i <=n ; i++){
+        for(int j = 1; j <= i ; j++){
+            cout<<j<<" ";
+        }
+      cout<< endl;
+    }
+ return 0;
+}
+```
+> A 
+> B B 
+> C C C 
+> D D D D 
+> E E E E E 
+> F F F F F F 
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int n  ;
+    cout<<"n >> ";
+    cin>>n;
+    for(int i = 65; i <=65+n ; i++){
+        for(int j = 65; j <= i ; j++){
+            cout<<char(i)<<" ";
+        }
+      cout<< endl;
+    }
+ return 0;
+}
+```
+
+> * * * * * 
+> * * * * 
+> * * * 
+> * * 
+> * 
+
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int n  ;
+    cout<<"n >> ";
+    cin>>n;
+    for(int i = 1 ; i <= n ; i++){
+        for(int j = i; j <= n ; j++){
+            cout<<"* ";
+        }
+      cout<< endl;
+    }
+ return 0;
+}
+```
+> 1 2 3 4 5 
+> 1 2 3 4 
+> 1 2 3 
+> 1 2 
+> 1 
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n = 0;
+    cout<<"n >> ";
+    cin>>n;
+    for(int i = n ; i >= 1 ; i--){
+        for(int j = 1 ; j<= i ; j++){
+            cout<<j<<" ";
+        }
+       cout<< endl;
+    }
+ return 0;
+}
+```
+>  pyramid  / half diamond  
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+  int n = 0;
+  cout<<"n > ";
+  cin>>n;
+  for(int i = 1 ; i <=n ; i++){  
+    for(int j = 1 ; j<=n ; j++){ 
+      if (j<=n-i){  // j <= n-i so it will print space or else its going to print *
+        cout<<" "; 
+      } 
+      else                  // if j = 1 , n = 5 - i = 1 => 4  (j <=4 true print " ")
+       cout<<"* ";    // else j = 1 , n = 5 - i = 5 =>  0  ( * )  
+    }
+    cout << endl;
+  }
+  return 0;
+}
+```
+>  HALF  DIAMOND UPSIDE DOWN
+> * * * * * 
+>  * * * * 
+>   * * * 
+>    * * 
+>     * 
+
+```
+#include <iostream>
+using namespace std;
+
+
+int main(){
+ int n = 0;
+ cout<<"n > ";
+ cin>>n;
+
+for(int i = n ; i >=1 ; i--){ 
+   for(int j = 1 ; j<=n ; j++){ 
+     if (j<=n-i){  
+      cout<<" ";
+     }
+     else                  
+    cout<<"* ";    
+   }
+  cout << endl;
+  }
+  return 0;
+}
+```
+
+>     1 
+>    1 1 
+>   1 2 1 
+>  1 3 3 1 
+> 1 4 6 4 1 
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+ int n = 0;
+ cout<<"n > ";
+ cin>>n;
+  for(int i = 1 ; i<= n ; i++){
+       int cofient = 1;
+      for(int k = n-i ;k > 0;k--){
+          cout<<" ";
+      } for( int j = 1 ; j <= i ; j++){
+          cout<<cofient<<" ";
+          cofient = cofient * (i-j)/j;
+      }
+      cout<< endl;
+  }
+return 0;
+}
+```
+
+> 1 
+> 2 3 
+> 4 5 6 
+> 7 8 9 10 
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n = 0;
+    cout<<"n >> ";
+    cin>>n;
+    int num =1;
+    for(int i = 1 ; i <=n; i++){
+        for(int j = 1; j<=i; j++){
+            cout<<num++<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+``
 
