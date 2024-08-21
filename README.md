@@ -1,4 +1,4 @@
-# pf-tasks 👩‍💻
+# pf-tasks and programming notes 👩‍💻
 
 > prgramming fundamentals lab work &amp; activity
 
